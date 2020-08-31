@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  web:
+    build: "./web"
+    ports:
+      - "5000:5000"
+    links:
+      - api_db
+  api_db:
+    build: "./db"
+    # image: mongo:3.6.4
